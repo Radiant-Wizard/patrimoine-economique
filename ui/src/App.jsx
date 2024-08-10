@@ -70,8 +70,8 @@ const PossessionTable = () => {
         </tbody>
       </table>
 
-      <h3>Calculate Patrimoine Value</h3>
       <div className="footer">
+      <h2>Calcul du Patrimoine </h2>
         <label htmlFor="datePicker">Select Date:</label>
         <input
           type="date"
@@ -81,7 +81,7 @@ const PossessionTable = () => {
           onChange={handleDateChange}
         />
       <button onClick={calculateCurrentValue} className="btn btn-primary">Valider</button>
-      <h4 >Valeur du Patrimoine: {patrimoineValue.toFixed(2)}</h4>
+      <h4 >Valeur du Patrimoine : <span> {patrimoineValue.toFixed(2)} Ar</span></h4>
       </div>
 
     </div>

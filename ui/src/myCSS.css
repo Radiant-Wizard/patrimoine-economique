@@ -1,5 +1,9 @@
+* {
+    font-weight: 500;
+}
+
 #Title{
-    margin-left: 10vw;
+    margin-left: 25vw;
     border-radius: 2vw;
     background: #000;
     width: 20vw;
@@ -14,9 +18,12 @@
     width: 10vw;
 }
 th{
-    color: red !important;
+    font-size: 1vw;
+    font-weight: bolder;
+    color: rgb(75, 75, 75) !important;
 }
  body{
+    width: 100dvw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +33,20 @@ th{
     gap: 1vh;
     display: flex;
     flex-direction: column;
+    h2{
+        
+        font-size: 1.5vw !important;
+    }
+    span{
+        font-weight: bolder;
+        color: rgb(20, 207, 51);
+    }
  }
  .footer button{
     width: 7.5vw;
     font-size: 2vh;
     font-weight: bolder;
+ }
+ .container{
+    width: 100dvw !important;
  }
