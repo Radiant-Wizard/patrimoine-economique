@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Possession from './Possession';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './myCSS.css'
+
 
 const PossessionTable = () => {
   const [possessions, setPossessions] = useState([]);
@@ -33,7 +35,7 @@ const PossessionTable = () => {
   const calculateCurrentValue = () => {
     const selectedDateObj = new Date(selectedDate);
     if (isNaN(selectedDateObj.getTime())) {
-      alert('Please enter a valid date in the format YYYY-MM-DD');
+      alert('Please select a valid date');
       return;
     }
     const totalValue = possessions.reduce((acc, possession) => acc + possession.getValeur(selectedDateObj), 0);
@@ -42,8 +44,8 @@ const PossessionTable = () => {
 
   return (
     <div className="container">
-      <h2>Possessions</h2>
-      <table className="table table-striped">
+      <h2 id='Title'>Possessions</h2>
+      <table className="table table-striped bordered" id='table'>
         <thead>
           <tr>
             <th>Libelle</th>
@@ -69,20 +71,19 @@ const PossessionTable = () => {
       </table>
 
       <h3>Calculate Patrimoine Value</h3>
-      <div className="form-group">
-        <label htmlFor="datePicker">Select Date (YYYY-MM-DD):</label>
+      <div className="footer">
+        <label htmlFor="datePicker">Select Date:</label>
         <input
-          type="text"
+          type="date"
           className="form-control"
           id="datePicker"
           value={selectedDate}
           onChange={handleDateChange}
-          placeholder="YYYY-MM-DD"
         />
-      </div>
       <button onClick={calculateCurrentValue} className="btn btn-primary">Valider</button>
+      <h4 >Valeur du Patrimoine: {patrimoineValue.toFixed(2)}</h4>
+      </div>
 
-      <h4>Valeur du Patrimoine: {patrimoineValue.toFixed(2)}</h4>
     </div>
   );
 };
