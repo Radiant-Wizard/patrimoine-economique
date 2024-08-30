@@ -63,22 +63,24 @@ th{
     height: 80dvh;
 }
 .update-page {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100dvw;
-    background-color: #121212; 
+    width: 100vw;
+    background-color: #121212;
     color: #e0e0e0;
   }
   
   .update-form {
-    background-color: #1e1e1e; 
+    background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
-    width: 50vw;
+    max-width: 500px; /* Increased max-width */
+    width: 80vw; /* Increased width */
+    padding: 20px; /* Added padding */
+    margin: 20px; /* Added margin */
   }
   
   .update-form label {
@@ -95,21 +97,22 @@ th{
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #333333; 
-    color: #e0e0e0; 
+    background-color: #333333;
+    color: #e0e0e0;
   }
   
   .update-form input[type="text"]::placeholder,
   .update-form input[type="date"]::placeholder {
-    color: #bbbbbb; 
+    color: #bbbbbb;
   }
   
   .update-form input[type="text"]:focus,
   .update-form input[type="date"]:focus {
     outline: none;
-    border: 1px solid #6200ea; 
+    border: 1px solid #6200ea;
     box-shadow: 0 0 5px #6200ea;
   }
+  
   .btn-dark {
     background-color: #6200ea; /* Dark purple button */
     border: none;
@@ -121,11 +124,20 @@ th{
     transition: background-color 0.3s ease;
     width: 100%;
   }
+  #return-update{
+    width: 10vw;
+    background: #181818;
+    transition: 500ms ease-in-out;
+  }
+  #return-update:hover{
+    scale: 1.1;
+    background: #b8b7b7;
+    color: black;
+  }
   
   .btn-dark:hover {
     background-color: #3700b3; /* Darker purple on hover */
   }
-
   #container-possessionTable {
     background-color: #1e1e1e;
     color: #e0e0e0;

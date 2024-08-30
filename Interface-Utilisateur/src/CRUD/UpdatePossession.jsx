@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-
+import {Link} from 'react-router-dom';
 const UpdatePossessionForm = () => {
   const [formData, setFormData] = useState({
     possesseur: "",
@@ -74,6 +74,11 @@ const UpdatePossessionForm = () => {
           UPDATE
         </button>
       </form>
+      <Link to='/possession'>
+      <button type="button" className="btn btn-dark" id="return-update">
+         GO BACK
+        </button>
+        </Link>
     </div>
   );
 };
