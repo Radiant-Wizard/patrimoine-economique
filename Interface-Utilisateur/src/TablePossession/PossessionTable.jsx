@@ -161,32 +161,31 @@ const PossessionTable = () => {
           ))}
         </tbody>
       </Table>
-
       <div className="footer my-4">
-        <h2>Calcul du Patrimoine</h2>
-        <div className="mb-3">
-          <label htmlFor="datePicker" className="form-label">
-            Select Date:
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="datePicker"
-            value={selectedDate}
-            onChange={handleDateChange}
-          />
-        </div>
-        <Button
-          onClick={calculateCurrentValue}
-          variant="primary"
-          className="mb-3"
-        >
-          Valider
-        </Button>
-        <h4>
-          Valeur du Patrimoine: <span>{patrimoineValue.toFixed(2)} Ar</span>
-        </h4>
+      <h2>Calcul du Patrimoine</h2>
+      <div className="mb-3">
+        <label htmlFor="datePicker" className="form-label">
+          Select Date:
+        </label>
+        <input
+          type="date"
+          className="form-control"
+          id="datePicker"
+          value={selectedDate}
+          onChange={handleDateChange}
+        />
       </div>
+      <Button
+        onClick={calculateCurrentValue}
+        variant="primary"
+        className="mb-3"
+      >
+        Valider
+      </Button>
+      <h4>
+        Valeur du Patrimoine: <span>{patrimoineValue.toFixed(2)} Ar</span>
+      </h4>
+    </div>
 
       <div className="d-flex justify-content-center my-4">
         <Link to="/possession/create" className="mx-2">
