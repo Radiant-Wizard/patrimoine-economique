@@ -22,7 +22,7 @@ async function writeFile(path, data) {
       encoding: 'utf8',
     });
     return {
-      status: "OK",
+      status: "wouss ! it worked :)",
     };
   } catch (err) {
     return {

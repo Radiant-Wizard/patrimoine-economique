@@ -1,0 +1,182 @@
+* {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+#Title{
+    margin-left: 25vw;
+    border-radius: 2vw;
+    background: #000;
+    width: 20vw;
+    height: 5vh;
+    font-weight: bolder;
+    border: 1px black solid;
+    text-align: center;
+    color: white;
+}
+
+#datePicker {
+    width: 10vw;
+}
+th{
+    font-size: 1vw;
+    font-weight: bolder;
+    color: rgb(75, 75, 75) !important;
+}
+ body{
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .footer{
+    height: fit-content;
+    gap: 1vh;
+    display: flex;
+    flex-direction: column;
+    h2{
+        
+        font-size: 1.5vw !important;
+    }
+    span{
+        font-weight: bolder;
+        color: rgb(20, 207, 51);
+    }
+ }
+ .footer button{
+    width: 7.5vw;
+    font-size: 2vh;
+    font-weight: bolder;
+ }
+ .container{
+    width: 100dvw !important;
+ }
+#container-possessionTable{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100dvw;
+    height: fit-content;
+}
+.chart{
+    width: 80dvw;
+    height: 80dvh;
+}
+.update-page {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100dvw;
+    background-color: #121212; 
+    color: #e0e0e0;
+  }
+  
+  .update-form {
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 50vw;
+  }
+  
+  .update-form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .update-form input[type="text"],
+  .update-form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333; 
+    color: #e0e0e0; 
+  }
+  
+  .update-form input[type="text"]::placeholder,
+  .update-form input[type="date"]::placeholder {
+    color: #bbbbbb; 
+  }
+  
+  .update-form input[type="text"]:focus,
+  .update-form input[type="date"]:focus {
+    outline: none;
+    border: 1px solid #6200ea; 
+    box-shadow: 0 0 5px #6200ea;
+  }
+  .btn-dark {
+    background-color: #6200ea; /* Dark purple button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .btn-dark:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+  }
+
+  #container-possessionTable {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    height: 100dvh;
+    width: 100dvw;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  #Navbar {
+    border-bottom: 2px solid #444;
+  }
+  
+  .table-dark thead th {
+    border-bottom: 2px solid #444;
+  }
+  
+  .footer {
+    background-color: #2a2a2a; /* Slightly lighter dark background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .footer h4 span {
+    color: #03dac6; /* Highlight color */
+  }
+  
+  .btn-primary,
+  .btn-success,
+  .btn-info,
+  .btn-warning {
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-success:hover {
+    background-color: #28a745;
+  }
+  
+  .btn-info:hover {
+    background-color: #17a2b8;
+  }
+  
+  .btn-warning:hover {
+    background-color: #ffc107;
+  }
+  

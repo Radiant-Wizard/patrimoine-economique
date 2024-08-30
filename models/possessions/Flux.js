@@ -1,7 +1,3 @@
-// THIS MAY CHANGE IN THE FUTURE
-// dateDebut = 01/01/2024
-// montant = 400_000
-// jour = 1
 import Possession from "./Possession.js";
 export default class Flux extends Possession {
   // Si salaire => +
@@ -10,8 +6,6 @@ export default class Flux extends Possession {
     super(possesseur, libelle, valeur, dateDebut, dateFin, tauxAmortissement)
     this.valeur = 0;
     this.jour = jour;
-    // this.source = source; // null || Compte
-    // this.destination = destination; // Compte
     this.dateDebut = dateDebut;
     this.dateFin = dateFin;
     this.valeurConstante = valeur
