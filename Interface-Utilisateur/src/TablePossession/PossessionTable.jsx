@@ -6,7 +6,6 @@ import "../myCSS.css";
 import { Link } from "react-router-dom";
 import { Navbar, Table } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import UpdatePossessionForm from "../Update/UpdatePossession";
 const PossessionTable = () => {
   const [possessions, setPossessions] = useState([]);
   const [selectedDate, setSelectedDate] = useState("");

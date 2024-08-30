@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PossessionTable from './Possession/PossessionTable';
-import Patrimoine from './Patrimoine/Patrimoine';
 import Header from './Header/Header';
-import UpdatePossessionForm from './Update/UpdatePossession';
+import Patrimoine from './ChartPatrimoine/Patrimoine';
+import PossessionTable from './TablePossession/PossessionTable';
+import UpdatePossessionForm from './CRUD/UpdatePossession';
 
 const route = createBrowserRouter([
   {
