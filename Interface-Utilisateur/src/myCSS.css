@@ -272,4 +272,73 @@ th{
   .btn-warning:hover {
     background-color: #ffc107;
   }
+  .create-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212; 
+    color: #e0e0e0;
+  }
+  
+  .create-form {
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 50vw;
+    padding: 20px; /* Added padding for better spacing */
+  }
+  
+  .create-form label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #e0e0e0; /* Ensures label text color is consistent */
+  }
+  
+  .create-form input[type="text"],
+  .create-form input[type="number"],
+  .create-form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333; 
+    color: #e0e0e0; 
+  }
+  
+  .create-form input[type="text"]::placeholder,
+  .create-form input[type="number"]::placeholder,
+  .create-form input[type="date"]::placeholder {
+    color: #bbbbbb; 
+  }
+  
+  .create-form input[type="text"]:focus,
+  .create-form input[type="number"]:focus,
+  .create-form input[type="date"]:focus {
+    outline: none;
+    border: 1px solid #6200ea; 
+    box-shadow: 0 0 5px #6200ea;
+  }
+  
+  .submit-button {
+    background-color: #6200ea; /* Dark purple button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+  }
   

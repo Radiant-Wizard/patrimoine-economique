@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import "../myCSS.css";
+import { Link } from "react-router-dom";
 const CreatePossessionForm = () => {
   const [formData, setFormData] = useState({
     possesseur: "John Doe",
@@ -17,6 +18,7 @@ const CreatePossessionForm = () => {
   };
 
   const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission
     try {
       const response = await fetch('/possession', {
         method: "POST",
@@ -36,34 +38,67 @@ const CreatePossessionForm = () => {
     } catch (error) {
       console.error("There was an error creating the possession!", error);
     }
-    
-
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Libelle:
-        <input type="text" name="libelle" value={formData.libelle} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Valeur:
-        <input type="number" name="valeur" value={formData.valeur} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Date Début:
-        <input type="date" name="dateDebut" value={formData.dateDebut} onChange={handleChange} required />
-      </label>
-      <br />
-      <label>
-        Taux:
-        <input type="number" step="0.01" name="taux" value={formData.taux} onChange={handleChange} required />
-      </label>
-      <br />
-      <button type="submit">Create Possession</button>
-    </form>
+    <div className="create-form-container">
+      <form onSubmit={handleSubmit} className="create-form">
+        <label>
+          Libelle:
+          <input
+            type="text"
+            name="libelle"
+            value={formData.libelle}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Valeur:
+          <input
+            type="number"
+            name="valeur"
+            value={formData.valeur}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Date Début:
+          <input
+            type="date"
+            name="dateDebut"
+            value={formData.dateDebut}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          Taux:
+          <input
+            type="number"
+            step="0.01"
+            name="taux"
+            value={formData.taux}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <br />
+        <button type="submit" className="submit-button">
+          Create Possession
+        </button>
+      </form>
+      <Link to='/possession'>
+      <button type="button" className="btn btn-dark" id="return-update">
+         GO BACK
+        </button>
+        </Link>
+      
+    </div>
   );
 };
 

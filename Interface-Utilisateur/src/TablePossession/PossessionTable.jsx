@@ -188,7 +188,7 @@ const PossessionTable = () => {
     </div>
 
       <div className="d-flex justify-content-center my-4">
-        <Link to="/possession/create" className="mx-2">
+        <Link to="/create-possession" className="mx-2">
           <Button variant="success" size="lg">
             New
           </Button>

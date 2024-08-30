@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import Patrimoine from './ChartPatrimoine/Patrimoine';
 import PossessionTable from './TablePossession/PossessionTable';
 import UpdatePossessionForm from './CRUD/UpdatePossession';
-
+import CreatePossessionForm from './CRUD/createPossession';
 const route = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +21,10 @@ const route = createBrowserRouter([
   },{
     path: "update-possession",
     element: <UpdatePossessionForm />
+  },
+  {
+    path: "create-possession",
+    element: <CreatePossessionForm/>
   }
 ])
 
