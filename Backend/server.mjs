@@ -11,12 +11,15 @@ import getValeurPatrimoine from './getValeurPatrimoine.js';
 
 const fileName = fileURLToPath(import.meta.url);
 const directoryName = dirname(fileName);
-
+const corsOptions = {
+  origin: 'https://your-frontend-url.onrender.com',
+  optionsSuccessStatus: 200,
+};
 
 const app = express();
 const PORT = 5000;
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOptions))
 
 app.get('/possession', (request, response) =>{
     response.set({
