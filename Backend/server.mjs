@@ -45,17 +45,18 @@ app.post('/possession', (req, res) =>{
     res.status(201).send(response);
 })
 
-app.put("/possession/:libelle", (request, response) => {
-    const libelle = request.params.libelle; // Assuming 'id' is the unique identifier
-    
-    try{
-        updatePossession(libelle, request.body);
-        response.status(204).send({ message: "it worked"})
-    } catch (error){
-        response.status(400).send({ error: error})
-    }
-});
 
+app.put("/possession/:libelle", async (request, response) => {
+    const libelle = request.params.libelle;
+    const newLibelle = request.body.libelle;
+  
+    try {
+      await updatePossession(libelle, { libelle: newLibelle });
+      response.status(204).send({ message: "Libelle updated successfully" });
+    } catch (error) {
+      response.status(400).send({ error: error.message });
+    }
+  });
 app.put("/possession/:libelle/close", (request, response) => {
     const libelle = request.params.libelle; // Assuming 'id' is the unique identifier
     
