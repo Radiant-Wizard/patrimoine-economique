@@ -12,7 +12,7 @@ const PossessionTable = () => {
   const [patrimoineValue, setPatrimoineValue] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/possession")
+    fetch("https://my-backend.onrender.com/possession")
       .then((response) => response.json())
       .then((data) => {
         const possessionsData =
@@ -67,7 +67,7 @@ const PossessionTable = () => {
       if (response.ok) {
         alert("Possession closed successfully");
         // Refresh the possessions data
-        const updatedResponse = await fetch("http://localhost:5000/possession");
+        const updatedResponse = await fetch("https://my-backend.onrender.com/possession");
         const updatedData = await updatedResponse.json();
         setPossessions(
           updatedData
